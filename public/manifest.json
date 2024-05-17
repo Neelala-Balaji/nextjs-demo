@@ -1,0 +1,20 @@
+{
+    "name": "Ndational Data Analytics Platform",
+    "short_name": "NDAP",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "icons": [
+      {
+        "src": "/images/android-chrome-192x192.ico"
+      },
+      {
+        "src": "/android-chrome-512x512.ico"
+      },
+      {
+        "src": "/apple-touch-icon.ico"
+      }
+    ]
+  }
+  
