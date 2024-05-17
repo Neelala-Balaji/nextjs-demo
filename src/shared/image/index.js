@@ -4,6 +4,8 @@ import { SvgIcon } from "@mui/material";
 import CustomIcons from "./icons";
 import { voidFunction } from "@/utils/index";
 
+//write image
+
 const SvgImage = ({
   imageName = "IconDefault",
   url,
