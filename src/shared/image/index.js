@@ -1,25 +1,20 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
-import { SvgIcon } from "@mui/material";
-import CustomIcons from "./icons";
-import { voidFunction } from "@/utils/index";
-
-//write image
+import { voidFunction } from "@/lib/utils/index";
 
 const SvgImage = ({
-  imageName = "IconDefault",
   url,
   width = 20,
   height = 20,
-  onClick = false,
+  onClick = voidFunction,
   verticalAlign = 2,
   hover = false,
   children,
   ...rest
 }) => {
-  const SvgComponent = CustomIcons[imageName];
-
-  if (SvgComponent) {
+  if (url) {
     return (
       <span
         className={`icon-color ${hover ? "icon-color-hover" : ""} customIcon ${
@@ -29,22 +24,13 @@ const SvgImage = ({
           verticalAlign: `-0.${verticalAlign}em`,
           color: rest.disabled ? "#cccccc" : "",
         }}
-        onClick={onClick || voidFunction}
+        onClick={onClick}
         {...rest}
       >
-        <SvgComponent
-          component={SvgComponent}
-          fontSize={fontSize ? fontSize : "inherit"}
-          style={{ width, height }}
-          color={rest.disabled ? "disabled" : "inherit"}
-        />
+        <Image src={url} width={width} height={height} {...rest} />
         {children}
       </span>
     );
-  }
-
-  if (url) {
-    return <Image src={url} width={width} height={height} {...rest} />;
   }
 
   return null;

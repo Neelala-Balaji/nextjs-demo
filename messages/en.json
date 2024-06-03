@@ -1341,5 +1341,10 @@
   "FailedFetchAutorisedNewsletterUsers": "Failed to get authorised upload newsletter users",
   "VerificationLinkToEmail": "A verification link has been dispatched to your email address. Please review both your inbox and spam folder for the verification email. Once located, click on <b>'CLICK HERE TO VERIFY YOUR EMAIL'</b> to proceed with the login process.",
   "VerificationLinkTitle": "Verification link sent to Email",
-  "MegdapMinistryLabel": "Ministries / Departments"
+  "MegdapMinistryLabel": "Ministries / Departments",
+  "noAccessPage": "You do not have the necessary permissions to view this page.",
+  "Home": {
+    "title":"National Data & Analytics",
+    "description":"The National Data and Analytics Platform (NDAP) is a one-stop solution for all data-related needs. It provides access to a wide range of datasets from various ministries and departments, allowing users to search, merge, visualize, and download data easily. The platform also offers a range of features such as data standardization, data merging, and data visualization, making it a valuable resource for researchers, policymakers, and the general public."
+  }
 }

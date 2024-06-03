@@ -10,6 +10,7 @@ import Divider from "@mui/material/Divider";
 const Footer = () => {
   const t = useTranslations();
   return (
+    <>
     <Grid
       container
       justifyContent={"center"}
@@ -17,11 +18,6 @@ const Footer = () => {
       spacing={2}
       sx={{ paddingLeft: { xs: 2, sm: 2 }, paddingRight: { xs: 2, sm: 2 } }}
     >
-      <Divider
-        orientation="horizontal"
-        sx={{ border: "1px solid #f2f4f8", width: "100%" }}
-      />
-
       <Grid container item justifyContent={"center"}>
         <Grid item xs={12} sm={2}>
           <Image
@@ -178,6 +174,7 @@ const Footer = () => {
         </Stack>
       </Grid>
     </Grid>
+    </>
   );
 };
 

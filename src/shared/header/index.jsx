@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Button, IconButton, Tooltip, Typography } from '@mui/material';
+import { Grid, Tooltip } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -7,12 +7,16 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SearchBar from "@/components/searchbar";
 import CustomButton from '@/components/buttons';
 import LanguageDropdown from '@/shared/language/index';
+import { useModalContext } from '@/context/modalContext';
+import Login from '../login/page';
 
 const Header = () => {
+  const { openModal } = useModalContext();
   return (
     <header >
       <Grid container alignItems="center" sx={{ backgroundColor: '#192c6d', height: 64 }}>
         <Grid item xs={12} xl={3} sx={{ paddingLeft: '10px', paddingRight: '10px' }}>
+          <Login />
           <Link href="/">
               <Image
                 src="/images/ndap_header_logo.png"
@@ -47,12 +51,12 @@ const Header = () => {
           </Grid>
           <Grid item>
             <Tooltip title="Help on NDAP">
-              <CustomButton text="Help" variant="contained" color="secondary" />
+              <CustomButton href="/help" text="Help" variant="contained" color="secondary" />
             </Tooltip>
           </Grid>
           <Grid item>
             <Tooltip title="Login">
-              <CustomButton text="Login" variant="outlined" color="secondary" />
+              <CustomButton onClick={openModal} text="Login" variant="outlined" color="secondary" />
             </Tooltip>
           </Grid>
         </Grid>

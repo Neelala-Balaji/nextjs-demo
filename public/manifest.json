@@ -10,10 +10,10 @@
         "src": "/images/android-chrome-192x192.ico"
       },
       {
-        "src": "/android-chrome-512x512.ico"
+        "src": "/images/android-chrome-512x512.ico"
       },
       {
-        "src": "/apple-touch-icon.ico"
+        "src": "/images/apple-touch-icon.ico"
       }
     ]
   }

@@ -20,6 +20,11 @@ const theme = createTheme({
     fontFamily: font,
     fontSize: 14,
   },
+  palette: {
+    grey: {
+      main: "rgb(0 0 0 / 45%)",
+    },
+  },
   components: {
     MuiButton: {
       styleOverrides: {

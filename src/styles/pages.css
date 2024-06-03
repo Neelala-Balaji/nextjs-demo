@@ -1,4 +1,9 @@
 /*Home page */
+.heading {
+  font-size: 20px;
+  line-height: 24px;
+}
+
 .grid-column {
   border-right: 1px solid #dee2e6;
   min-height: 100px;
@@ -6,9 +11,18 @@
   padding-right: 10px;
 }
 
+.grid-column:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.home-divider {
+  border-bottom: 1px solid #dee2e6;
+  margin: 1.5rem 0;
+}
+
 .last-column {
   border-right: none !important;
-  
 }
 
 .grid-row {
@@ -19,6 +33,62 @@
   border-bottom: none !important;
 }
 
+.sectorLink, .ministryLink, .datasetLink {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #000000;
+}
+
+.sectorLink:hover div {
+  color: #2e5cf6;
+}
+
+.ministryLink {
+  display: block;
+  position: relative;
+  padding: 8px 8px 8px 8px;
+}
+
+.dataset-list-wrapper {
+  min-height: 70px;
+  max-height: 85px;
+}
+
+.ministryLink:hover, .dataset-list-wrapper:hover {
+  box-shadow: 0 .25rem 3.75rem 0 rgba(0, 0, 0, .16);
+  border-radius: 4px;
+}
+
+.ministryLink:hover span {
+  display: block !important;
+}
+
+.more{
+  text-align: right;
+  text-decoration: none;
+  color: #2e5cf6;
+}
+
+.right {
+  float: right;
+  display: none;
+}
+
+.period .MuiBreadcrumbs-separator {
+  font-size: 1.3rem;
+  position: relative;
+  margin: -10px 2px 0 10px;
+  font-weight: bold;
+} 
+
+.list-item p {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+/*Home page css end*/
+
 .searchBarHome {
   position: absolute;
   margin-top: 9vh;
@@ -26,7 +96,7 @@
   width: 100%;
 }
 .title {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 48px;
@@ -35,7 +105,7 @@
   color: "#fff";
 }
 .subTitle {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -76,7 +146,7 @@
 }
 .ndapworkSubtitle {
   text-align: left;
-  color:'#ccc';
+  color: "#ccc";
   font-size: 1rem;
   margin-bottom: 0 !important;
 }
@@ -95,9 +165,25 @@
     line-height: 46px;
   }
 }
-.reactMPlayer{
+.reactMPlayer {
   height: auto !important;
 }
-.reactTPlayer{
+.reactTPlayer {
   height: 100% !important;
+}
+
+/* write media query for mobile */
+@media (max-width: 768px) {
+  .list-item p {
+    font-size: 11px;
+  }
+  .period .MuiBreadcrumbs-separator {
+    font-size: 1rem;
+    margin: -8px 0px 0 5px;
+  } 
+
+  .grid-column {
+    border-right: none;
+    border-bottom: 1px solid #dee2e6;
+  }
 }
